@@ -1,0 +1,422 @@
+{
+	"visited": {
+		"/events": 1,
+		"https://devopsplayground.co.uk/blog/": 1,
+		"https://devopsplayground.co.uk/contact/": 1,
+		"https://devopsplayground.co.uk/devops-playground-27-hands-on-visual-regression-with-ayespy/": 2,
+		"https://devopsplayground.co.uk/devops-playground-more-than-just-another-lecture/": 2,
+		"https://devopsplayground.co.uk/digital-women-in-tech-devops-playground-hands-on-with-cypress/": 2,
+		"https://devopsplayground.co.uk/our-story/": 1,
+		"https://www.meetup.com/DevOps-Playground-Edinburgh/": 1,
+		"https://www.meetup.com/DevOps-Playground-Singapore/": 1,
+		"https://www.meetup.com/DevOpsPlayground/": 1,
+		"javascript:void(0)": 1
+	},
+	"pageUrl": {
+		"Scheme": "https",
+		"Opaque": "",
+		"User": null,
+		"Host": "www.devopsplayground.co.uk",
+		"Path": "/events/register",
+		"RawPath": "",
+		"ForceQuery": false,
+		"RawQuery": "",
+		"Fragment": "",
+		"RawFragment": ""
+	},
+	"parentUrl": null,
+	"links": [
+		{
+			"visited": null,
+			"pageUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "www.devopsplayground.co.uk",
+				"Path": "/events",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"parentUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "www.devopsplayground.co.uk",
+				"Path": "/events/register",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"links": null
+		},
+		{
+			"visited": null,
+			"pageUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "devopsplayground.co.uk",
+				"Path": "/our-story/",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"parentUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "www.devopsplayground.co.uk",
+				"Path": "/events/register",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"links": null
+		},
+		{
+			"visited": null,
+			"pageUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "devopsplayground.co.uk",
+				"Path": "/blog/",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"parentUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "www.devopsplayground.co.uk",
+				"Path": "/events/register",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"links": null
+		},
+		{
+			"visited": null,
+			"pageUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "devopsplayground.co.uk",
+				"Path": "/contact/",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"parentUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "www.devopsplayground.co.uk",
+				"Path": "/events/register",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"links": null
+		},
+		{
+			"visited": null,
+			"pageUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "devopsplayground.co.uk",
+				"Path": "/devops-playground-more-than-just-another-lecture/",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"parentUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "www.devopsplayground.co.uk",
+				"Path": "/events/register",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"links": null
+		},
+		{
+			"visited": null,
+			"pageUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "devopsplayground.co.uk",
+				"Path": "/devops-playground-more-than-just-another-lecture/",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"parentUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "www.devopsplayground.co.uk",
+				"Path": "/events/register",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"links": null
+		},
+		{
+			"visited": null,
+			"pageUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "devopsplayground.co.uk",
+				"Path": "/devops-playground-27-hands-on-visual-regression-with-ayespy/",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"parentUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "www.devopsplayground.co.uk",
+				"Path": "/events/register",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"links": null
+		},
+		{
+			"visited": null,
+			"pageUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "devopsplayground.co.uk",
+				"Path": "/devops-playground-27-hands-on-visual-regression-with-ayespy/",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"parentUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "www.devopsplayground.co.uk",
+				"Path": "/events/register",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"links": null
+		},
+		{
+			"visited": null,
+			"pageUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "devopsplayground.co.uk",
+				"Path": "/digital-women-in-tech-devops-playground-hands-on-with-cypress/",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"parentUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "www.devopsplayground.co.uk",
+				"Path": "/events/register",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"links": null
+		},
+		{
+			"visited": null,
+			"pageUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "devopsplayground.co.uk",
+				"Path": "/digital-women-in-tech-devops-playground-hands-on-with-cypress/",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"parentUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "www.devopsplayground.co.uk",
+				"Path": "/events/register",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"links": null
+		},
+		{
+			"visited": null,
+			"pageUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "www.meetup.com",
+				"Path": "/DevOpsPlayground/",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"parentUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "www.devopsplayground.co.uk",
+				"Path": "/events/register",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"links": null
+		},
+		{
+			"visited": null,
+			"pageUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "www.meetup.com",
+				"Path": "/DevOps-Playground-Edinburgh/",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"parentUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "www.devopsplayground.co.uk",
+				"Path": "/events/register",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"links": null
+		},
+		{
+			"visited": null,
+			"pageUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "www.meetup.com",
+				"Path": "/DevOps-Playground-Singapore/",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"parentUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "www.devopsplayground.co.uk",
+				"Path": "/events/register",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"links": null
+		},
+		{
+			"visited": null,
+			"pageUrl": {
+				"Scheme": "javascript",
+				"Opaque": "void(0)",
+				"User": null,
+				"Host": "www.devopsplayground.co.uk",
+				"Path": "/",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"parentUrl": {
+				"Scheme": "https",
+				"Opaque": "",
+				"User": null,
+				"Host": "www.devopsplayground.co.uk",
+				"Path": "/events/register",
+				"RawPath": "",
+				"ForceQuery": false,
+				"RawQuery": "",
+				"Fragment": "",
+				"RawFragment": ""
+			},
+			"links": null
+		}
+	]
+}
