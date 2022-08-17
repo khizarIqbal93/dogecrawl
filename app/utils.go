@@ -16,22 +16,6 @@ type page struct {
 	Links     []page         `json:"links"`
 }
 
-// returns the DOM of urlString as a string
-func getHtml(urlString string) string {
-	resp, err := http.Get(urlString)
-	if err != nil {
-		panic(err)
-	}
-	defer resp.Body.Close()
-
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		panic(err)
-	}
-	html := string(body)
-	return html
-}
-
 func (p *page) setPageUrl(urlString string) {
 	parsedUrl, err := url.Parse(urlString)
 	if err != nil {
@@ -52,8 +36,27 @@ func (p *page) setPageUrl(urlString string) {
 	p.PageUrl = parsedUrl
 }
 
-/* For the given htmlDOM string, returns a map of type map[string]int,
-where key is the url and value is the number of times it was found in the DOM */
+// returns the DOM of urlString as a string
+func getHtml(urlString string) string {
+	resp, err := http.Get(urlString)
+	if err != nil {
+		panic(err)
+	}
+	defer resp.Body.Close()
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		panic(err)
+	}
+	html := string(body)
+	return html
+}
+
+/*
+	For the given htmlDOM string, returns a map of type map[string]int,
+
+where key is the url and value is the number of times it was found in the DOM
+*/
 func (p *page) getLinks() {
 	var links = make(map[string]int)
 	doc, err := html.Parse(strings.NewReader(getHtml(p.PageUrl.String())))
