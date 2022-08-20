@@ -10,10 +10,9 @@ import (
 )
 
 type page struct {
-	Visited   map[string]int `json:"visited"`
-	PageUrl   *url.URL       `json:"pageUrl"`
-	ParentUrl *url.URL       `json:"parentUrl"`
-	Links     []page         `json:"links"`
+	PageUrl   *url.URL `json:"pageUrl"`
+	ParentUrl *url.URL `json:"parentUrl"`
+	Links     []page   `json:"links"`
 }
 
 func (p *page) setPageUrl(urlString string) {
@@ -26,10 +25,10 @@ func (p *page) setPageUrl(urlString string) {
 	}
 	if parsedUrl.Host == "" {
 		newHost, newPath, _ := strings.Cut(parsedUrl.Path, "/")
-		parsedUrl.Host = newHost
 		if newHost == "" {
 			parsedUrl.Host = p.ParentUrl.Host
 		}
+		parsedUrl.Host = newHost
 		parsedUrl.Path = "/" + newPath
 	}
 
@@ -53,16 +52,10 @@ func getHtml(urlString string) string {
 }
 
 /*
-	For the given htmlDOM string, returns a map of type map[string]int,
-
-where key is the url and value is the number of times it was found in the DOM
+appends links found in p.PageUrl under p.Links and records it in visited map[string]int
 */
-func (p *page) getLinks() {
-	var links = make(map[string]int)
-	doc, err := html.Parse(strings.NewReader(getHtml(p.PageUrl.String())))
-	if err != nil {
-		panic(err)
-	}
+func (p *page) getLinks(visited map[string]int) {
+	// TODO check if domain same
 	var f func(*html.Node)
 	f = func(n *html.Node) {
 		if n.Type == html.ElementNode && n.Data == "a" {
@@ -72,8 +65,7 @@ func (p *page) getLinks() {
 					child.ParentUrl = p.PageUrl
 					child.setPageUrl(a.Val)
 					p.Links = append(p.Links, child)
-					links[a.Val]++
-					break
+					visited[child.PageUrl.String()]++
 				}
 			}
 		}
@@ -81,12 +73,13 @@ func (p *page) getLinks() {
 			f(c)
 		}
 	}
-	f(doc)
-	p.Visited = links
 
-	// if len(p.Links) > 0 {
-	// 	for i := 0; i < len(p.Links); i++ {
-	// 		p.Links[i].getLinks()
-	// 	}
-	// }
+	if visited[p.PageUrl.String()] == 0 {
+		doc, err := html.Parse(strings.NewReader(getHtml(p.PageUrl.String())))
+		if err != nil {
+			panic(err)
+		}
+
+		f(doc)
+	}
 }
