@@ -11,7 +11,7 @@ var visited map[string]int = make(map[string]int)
 
 func main() {
 	webPage := page{}
-	webPage.setPageUrl("https://www.devopsplayground.co.uk/events/register")
+	webPage.setPageUrl("https://www.devopsplayground.co.uk/events/register", true)
 	webPage.getLinks(visited)
 	pageJson, _ := json.Marshal(webPage)
 	writeFileErr := os.WriteFile("output.json", pageJson, 0666)

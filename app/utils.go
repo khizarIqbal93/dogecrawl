@@ -10,29 +10,40 @@ import (
 )
 
 type page struct {
-	PageUrl   *url.URL `json:"pageUrl"`
-	ParentUrl *url.URL `json:"parentUrl"`
+	PageUrl   *url.URL `json:"-"`
+	Page      string   `json:"page"`
+	ParentUrl *url.URL `json:"-"`
+	Parent    string   `json:"parent"`
 	Links     []page   `json:"links"`
 }
 
-func (p *page) setPageUrl(urlString string) {
+func (p *page) setPageUrl(urlString string, isRoot bool) {
 	parsedUrl, err := url.Parse(urlString)
+
 	if err != nil {
 		panic(err)
 	}
+
 	if parsedUrl.Scheme == "" {
 		parsedUrl.Scheme = "https"
 	}
+	// TODO fix this
 	if parsedUrl.Host == "" {
 		newHost, newPath, _ := strings.Cut(parsedUrl.Path, "/")
+		parsedUrl.Host = newHost
 		if newHost == "" {
 			parsedUrl.Host = p.ParentUrl.Host
 		}
-		parsedUrl.Host = newHost
 		parsedUrl.Path = "/" + newPath
 	}
 
 	p.PageUrl = parsedUrl
+	if isRoot {
+		p.ParentUrl, _ = url.Parse("https://" + p.PageUrl.Host)
+	}
+
+	p.Page = p.PageUrl.String()
+	p.Parent = p.ParentUrl.String()
 }
 
 // returns the DOM of urlString as a string
@@ -55,7 +66,6 @@ func getHtml(urlString string) string {
 appends links found in p.PageUrl under p.Links and records it in visited map[string]int
 */
 func (p *page) getLinks(visited map[string]int) {
-	// TODO check if domain same
 	var f func(*html.Node)
 	f = func(n *html.Node) {
 		if n.Type == html.ElementNode && n.Data == "a" {
@@ -63,9 +73,8 @@ func (p *page) getLinks(visited map[string]int) {
 				if a.Key == "href" {
 					child := page{}
 					child.ParentUrl = p.PageUrl
-					child.setPageUrl(a.Val)
+					child.setPageUrl(a.Val, false)
 					p.Links = append(p.Links, child)
-					visited[child.PageUrl.String()]++
 				}
 			}
 		}
@@ -74,12 +83,13 @@ func (p *page) getLinks(visited map[string]int) {
 		}
 	}
 
-	if visited[p.PageUrl.String()] == 0 {
+	// TODO check if domain host is same
+	if visited[p.PageUrl.String()] == 0 && p.ParentUrl.Host == p.PageUrl.Host {
 		doc, err := html.Parse(strings.NewReader(getHtml(p.PageUrl.String())))
 		if err != nil {
 			panic(err)
 		}
-
+		visited[p.PageUrl.String()]++
 		f(doc)
 	}
 }
